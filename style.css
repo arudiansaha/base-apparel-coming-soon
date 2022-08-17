@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --primary-red1: hsl(0, 36%, 70%);
+    --primary-red1-500: hsl(0, 36%, 70%, .5);
+    --primary-red2: hsl(0, 93%, 68%);
+    --primary-red2-600: hsl(0, 93%, 68%, .6);
+    --neutral-red3: hsl(0, 6%, 24%);
+    --linear1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    --font-size-text: 16px;
+}
+
+html,
+body {
+    position: relative;
+    margin: 0;
+    background-image: url('./images/bg-pattern-desktop.svg');
+}
+
+.site__color--red1 {
+    color: var(--primary-red1);
+}
+
+.site__color--red1-500 {
+    color: var(--primary-red1-500);
+}
+
+.site__color--red2 {
+    color: var(--primary-red2);
+}
+
+.site__color--red2-600 {
+    color: var(--primary-red2-600);
+}
+
+.site__color--red3 {
+    color: var(--neutral-red3);
+}
+
+.site__header {
+    display: none;
+}
+
+.site__main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(100% - 3rem, 50ch);
+    margin-inline: auto;
+}
+
+.description__header {
+    padding: 0;
+}
+
+.description__logo {
+    padding-block-end: 12rem;
+}
+
+.description__title {
+    width: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    margin-block: 0;
+    text-transform: uppercase;
+}
+
+.description__title--custom {
+    font-weight: 300;
+}
+
+.description__text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: var(--font-size-text);
+    padding-block-end: 1rem;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--primary-red1-500);
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.form:is(:focus, :invalid) {
+    border-color: var(--primary-red2);
+}
+
+.form__field {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.form__error {
+    visibility: hidden;
+}
+
+.form:is(:focus, :invalid) .form__error {
+    visibility: visible;
+}
+
+.form__input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: var(--font-size-text);
+    padding-block: 1rem;
+    padding-inline: 0.75rem;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.form__input:is(:active, :focus) {
+    outline: none;
+}
+
+.form__ghost-button {
+    width: 150px;
+    height: 40px;
+    visibility: hidden;
+}
+
+.form__button {
+    position: absolute;
+    right: -2px;
+    border: none;
+    border-radius: 2rem;
+    padding-block: 1.125rem;
+    padding-inline: 2.75rem;
+    cursor: pointer;
+}
+
+.form__button--linear2 {
+    box-shadow: 0 10px 15px -3px var(--primary-red1-500), 0 4px 6px -4px var(--primary-red1-500);
+    background-image: var(--linear2);
+}
+
+.form__button--linear2:is(:hover, :focus) {
+    filter: brightness(120%);
+}
+
+.form__message {
+    font-family: 'Josefin Sans';
+    font-size: var(--font-size-text);
+    padding-inline-start: 1rem;
+}
+
+.cover {
+    height: 100vh;
+}
+
+.cover__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site__footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: transform ease 1000ms;
+}
+
+.attribution {
+    font-family: 'Josefin Sans';
+    font-size: 11px;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body:hover .site__footer {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@media (max-width: 510px) {
+    .site__header {
+        display: block;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .site__header img {
+        height: 24px;
+    }
+
+    .site__main {
+        flex-direction: column-reverse;
+        overflow-y: visible;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .description__logo {
+        display: none;
+    }
+
+    .description__title {
+        width: fit-content;
+        font-size: 3rem;
+        line-height: 1;
+        letter-spacing: 0.75rem;
+        margin-block: 0;
+        padding-block-start: 3.75rem;
+    }
+
+    .form__ghost-button {
+        width: 120px;
+    }
+
+    .form__button {
+        padding-inline: 2rem;
+        right: -2px;
+    }
+
+    .cover {
+        height: fit-content;
+    }
+
+    .cover__image {
+        height: 250px;
+        object-position: 0 0;
+    }
+}
