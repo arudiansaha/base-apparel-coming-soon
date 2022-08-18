@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-- ![Desktop version.](./screenshots/desktop_1440_800.png)
-- ![Mobile Version.](./screenshots/mobile_375_800.png)
+- [Desktop version.](./screenshots/desktop_1440_800.png)
+- [Mobile Version.](./screenshots/mobile_375_800.png)
 
 ### Links
 
@@ -92,7 +92,7 @@ I still can't figure it out how to show error sign not from beginning, and just 
 ## Author
 
 - Website - [Personal blog](https://rizkyardiansyah.tech)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/arudiansaha)
+- Frontend Mentor - [@arudiansaha](https://www.frontendmentor.io/profile/arudiansaha)
 - Twitter - [@arudiansaha](https://www.twitter.com/arudiansaha)
 - LinkedIn - [Rizky Ardiansyah](https://www.linkedin.com/in/ky-ardiansyah/)
 

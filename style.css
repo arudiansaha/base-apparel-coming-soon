@@ -91,11 +91,15 @@ body {
     align-items: center;
     border: 2px solid var(--primary-red1-500);
     border-radius: 2rem;
-    background-color: white;
+    background-image: var(--linear1);
 }
 
-.form:is(:focus, :invalid) {
+.form:invalid {
     border-color: var(--primary-red2);
+}
+
+.form:invalid:not(:focus):not(:active) {
+    border-color: var(--primary-red1-500);
 }
 
 .form__field {
@@ -104,11 +108,11 @@ body {
     padding: 0;
 }
 
-.form__error {
+.form .form__error {
     visibility: hidden;
 }
 
-.form:is(:focus, :invalid) .form__error {
+.form:invalid .form__error {
     visibility: visible;
 }
 
@@ -147,12 +151,12 @@ body {
     background-image: var(--linear2);
 }
 
-.form__button--linear2:is(:hover, :focus) {
+.form__button--linear2:is(:hover, :active) {
     filter: brightness(120%);
 }
 
 .form__message {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif;
     font-size: var(--font-size-text);
     padding-inline-start: 1rem;
 }
@@ -179,7 +183,7 @@ body {
 }
 
 .attribution {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 11px;
     text-align: center;
     border-radius: 2rem;
