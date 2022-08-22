@@ -70,7 +70,7 @@ Here some code of mine:
     height: 24px;
 }
 ```
-```js
+```javascript
 function validation() {
   const email = document.getElementById('input-email');
   const message = document.getElementById('error-message');
@@ -83,7 +83,7 @@ function validation() {
 
 ### Continued development
 
-I still can't figure it out how to show error sign not from beginning, and just activated when input is focused.
+~~I still can't figure it out how to show error sign not from beginning, and just activated when input is focused.~~
 
 ### Useful resources
 
@@ -91,7 +91,7 @@ I still can't figure it out how to show error sign not from beginning, and just 
 
 ## Author
 
-- Website - [Personal blog](https://rizkyardiansyah.tech)
+- Website - [Personal blog](https://blog-arudiansaha.vercel.app)
 - Frontend Mentor - [@arudiansaha](https://www.frontendmentor.io/profile/arudiansaha)
 - Twitter - [@arudiansaha](https://www.twitter.com/arudiansaha)
 - LinkedIn - [Rizky Ardiansyah](https://www.linkedin.com/in/ky-ardiansyah/)
@@ -100,4 +100,5 @@ I still can't figure it out how to show error sign not from beginning, and just 
 
 ### Big Thanks
 
+- [@Mod8124](https://www.frontendmentor.io/profile/arudiansaha)
 - [W3Schools](https://www.w3schools.com)

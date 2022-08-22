@@ -62,7 +62,8 @@ body {
 }
 
 .description__logo {
-    padding-block-end: 8rem;
+    position: relative;
+    bottom: 40%;
 }
 
 .description__title {
@@ -89,17 +90,9 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    border: 2px solid var(--primary-red1-500);
     border-radius: 2rem;
+    outline: 1px solid var(--primary-red1-500);
     background-image: var(--linear1);
-}
-
-.form:invalid {
-    border-color: var(--primary-red2);
-}
-
-.form:invalid:not(:focus):not(:active) {
-    border-color: var(--primary-red1-500);
 }
 
 .form__field {
@@ -108,12 +101,16 @@ body {
     padding: 0;
 }
 
-.form .form__error {
+.form__error {
     visibility: hidden;
 }
 
-.form:invalid .form__error {
+.active.form__error {
     visibility: visible;
+}
+
+.active.form {
+    outline: 1px solid var(--primary-red2);
 }
 
 .form__input {
@@ -124,6 +121,7 @@ body {
     border: none;
     border-radius: 2rem;
     width: 100%;
+    background-image: var(--linear1);
 }
 
 .form__input:is(:active, :focus) {

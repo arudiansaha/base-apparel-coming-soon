@@ -71,13 +71,18 @@
     };
 
     document.addEventListener('invalid', (function () {
+      const form = document.querySelector('.form');
+      const form__error = document.querySelector('.form__error');
+
       return function (e) {
         e.preventDefault();
         document.getElementById('input-email').focus();
+        // Thanks to @Mod8124 from Frontend Mentor for this 2 lines.
+        form.classList.add('active');
+        form__error.classList.add('active');
       };
     })(), true);
   </script>
-
 </body>
 
 </html>
