@@ -22,6 +22,7 @@ function createDescriptionForm(title: string, message: string) {
           class="app__error-sign"
           src="${pathname}/images/icons/icon-error.svg"
           alt=""
+          loading="lazy"
         >
         <button
           class="app__button"
@@ -34,6 +35,7 @@ function createDescriptionForm(title: string, message: string) {
             class="app__icon"
             src="${pathname}/images/icons/icon-arrow.svg"
             alt=""
+            loading="lazy"
           >
         </button>
       </fieldset>
