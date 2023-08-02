@@ -25,7 +25,7 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
-  background-image: var(--color-linear-00);
+  background-image: url('/images/backgrounds/bg-pattern-desktop.svg');
   color: var(--color-neutral-00);
   -webkit-font-smoothing: antialiased;
 }
@@ -57,6 +57,7 @@ h6 {
 }
 
 .app {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -75,6 +76,8 @@ h6 {
 
 .app__image {
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .app__description {
@@ -168,4 +171,52 @@ h6 {
   padding-inline-start: 1.125rem;
   text-align: start;
   color: var(--color-primary-01);
+}
+
+@media (min-width: 1024px) {
+  .app__bar {
+    position: fixed;
+    right: 50%;
+    left: 0;
+    width: 432px;
+  }
+
+  .app__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  .app__description {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    width: 432px;
+    text-align: left;
+  }
+
+  .app__title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app__image {
+    width: fit-content;
+  }
+
+  .app__title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .app__image {
+    width: 50%;
+  }
 }
