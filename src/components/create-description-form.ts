@@ -1,4 +1,6 @@
 function createDescriptionForm(title: string, message: string) {
+  const pathname = '/base-apparel-coming-soon';
+
   if (typeof document === 'undefined') return;
 
   const descriptionElement = document.createElement('div');
@@ -16,7 +18,11 @@ function createDescriptionForm(title: string, message: string) {
           placeholder="Email Address"
           required
         >
-        <img class="app__error-sign" src="/images/icons/icon-error.svg" alt="">
+        <img
+          class="app__error-sign"
+          src="${pathname}/images/icons/icon-error.svg"
+          alt=""
+        >
         <button
           class="app__button"
           type="submit"
@@ -26,7 +32,7 @@ function createDescriptionForm(title: string, message: string) {
           <img
             class="app__submit-sign"
             class="app__icon"
-            src="/images/icons/icon-arrow.svg"
+            src="${pathname}/images/icons/icon-arrow.svg"
             alt=""
           >
         </button>
