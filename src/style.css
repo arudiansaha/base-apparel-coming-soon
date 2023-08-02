@@ -115,7 +115,7 @@ h6 {
   align-items: center;
   column-gap: 0.5rem;
   padding: 0;
-  border: 2px solid var(--color-primary-00);
+  border: 1px solid var(--color-primary-00);
   border-radius: 999px;
 }
 
@@ -182,7 +182,7 @@ h6 {
   }
 
   .app__logo {
-    margin-block: 4rem;
+    margin-block: 5rem;
   }
 
   .app__image {
@@ -195,7 +195,7 @@ h6 {
 
   .app__description {
     position: fixed;
-    top: 0;
+    top: 15%;
     right: 50%;
     bottom: 0;
     left: 0;
