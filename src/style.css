@@ -181,6 +181,10 @@ h6 {
     width: 432px;
   }
 
+  .app__logo {
+    margin-block: 4rem;
+  }
+
   .app__image {
     position: absolute;
     top: 0;
@@ -218,5 +222,6 @@ h6 {
 @media (min-width: 1920px) {
   .app__image {
     width: 50%;
+    object-position: top;
   }
 }
